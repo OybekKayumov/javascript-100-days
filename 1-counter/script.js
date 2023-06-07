@@ -23,11 +23,25 @@ buttons.addEventListener('click', (e) => {
   if (e.target.classList.contains('add')) {
     console.log('Pressed Add Button!');
     count.innerHTML++;
+    setColor();
   }
   if (e.target.classList.contains('subtract')) {
     count.innerHTML--;
+    setColor();
   }
   if (e.target.classList.contains('reset')) {
     count.innerHTML = 0;
+    setColor();
   } 
+  // setColor();
 })
+
+function setColor() {
+  if (count.innerHTML < 0) {
+    count.style.color = 'yellow';
+  } else if (count.innerHTML > 0) {
+    count.style.color = 'red';
+  } else {
+    count.style.color = '#fff';
+  }
+}
