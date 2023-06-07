@@ -1,3 +1,6 @@
 # javascript-100-days
 
-### live-server
+### cd 'folder-name'
+
+       live-server
+
