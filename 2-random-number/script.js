@@ -1,47 +1,13 @@
-// const add = document.querySelector(".add");
-// const resetCount = document.querySelector(".reset");
-// const sub = document.querySelector(".subtract");
-const count = document.querySelector(".count");
-const buttons = document.querySelector(".buttons");
+const number  = document.querySelector('.number');
+const btn  = document.querySelector('.generate');
 
-/*
-add.addEventListener('click', () => {
-  count.innerHTML++;
-});
+const generateNumber = () => {
+  const randomNumber = Math.floor(Math.random() * 10 + 1);
 
-sub.addEventListener("click", () => {
-  count.innerHTML--;
-});
-
-resetCount.addEventListener("click", () => {
-  count.innerHTML = 0;
-});
-*/
-
-// event delegation
-buttons.addEventListener('click', (e) => {
-  if (e.target.classList.contains('add')) {
-    console.log('Pressed Add Button!');
-    count.innerHTML++;
-    setColor();
-  }
-  if (e.target.classList.contains('subtract')) {
-    count.innerHTML--;
-    setColor();
-  }
-  if (e.target.classList.contains('reset')) {
-    count.innerHTML = 0;
-    setColor();
-  } 
-  // setColor();
-})
-
-function setColor() {
-  if (count.innerHTML < 0) {
-    count.style.color = 'yellow';
-  } else if (count.innerHTML > 0) {
-    count.style.color = 'red';
-  } else {
-    count.style.color = '#fff';
-  }
+  number.innerHTML = randomNumber;
 }
+
+btn.addEventListener('click', generateNumber);
+
+// const rand = Math.floor(Math.random() * 10);
+// console.log(': ', rand);
