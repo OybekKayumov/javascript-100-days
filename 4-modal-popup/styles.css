@@ -97,7 +97,7 @@ form button:hover {
   border: 1px solid #777;
   text-align: center;
   animation: slide ease .8s;
-  color: #db6400;
+  /* color: #db6400; */
 }
 
 @keyframes slide {
@@ -107,5 +107,28 @@ form button:hover {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: var(--color-primary);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.slide-up {
+  animation: slide-up ease .8s;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0);
+  }
+  
+  100% {
+    transform: translateY(-50rem);
   }
 }
