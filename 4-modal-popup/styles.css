@@ -59,6 +59,53 @@ section .container {
   flex-direction: column;
 }
 
-form {
-  
+form  button {
+  outline: none;
+  border: 1px solid #fff;
+  padding: 8px;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--color-sec);
+}
+
+.modal {
+  /* display: none; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 1;
+}
+
+.modal-content {
+  width: 80%;
+  max-width: 60rem;
+  background-color: #eee;
+  margin: 15% auto;
+  padding: 2rem;
+  border: 1px solid #777;
+  text-align: center;
+  animation: slide ease .8s;
+  color: #db6400;
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(-30);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
