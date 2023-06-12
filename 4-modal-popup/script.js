@@ -14,7 +14,7 @@ const closeModal = (e) => {
   
   setTimeout(() => {
     modalContent.classList.remove('slide-up');
-    modal.style.display = 'none';    
+    modal.style.display = 'none';
   }, 500);
 }
 
