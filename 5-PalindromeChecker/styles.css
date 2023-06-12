@@ -42,7 +42,7 @@ img {
 
 /*  */
 body {
-  background-color: var(--light-blue);
+  background: var(--light-blue);
 }
 
 .main {
@@ -67,4 +67,22 @@ input {
   border-bottom: 2px solid var(--color-sec);
   padding: 1rem 5px;
   font-size: 1.6rem;
+}
+
+button {
+  width: 25%;
+  padding: 1rem 5px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: var(--white);
+  background: var(--color-primary);
+}
+
+p.result {
+  margin-top: 3.5rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--dark-grey);
 }
