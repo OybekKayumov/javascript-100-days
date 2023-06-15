@@ -39,3 +39,35 @@ img {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.instructions {
+  font-size: 1.6rem;
+  width: 30%;
+  height: 100vh;
+  background-color: var(--black);
+  padding-top: 5rem;
+  color: #eee;
+}
+
+.instructions h2 {
+  font-size: 3.5rem;
+  color: var(--color-sec);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.instructions h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  height: 2px;
+  background-color: #eee;
+}
