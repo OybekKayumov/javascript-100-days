@@ -149,9 +149,9 @@ nav .slide {
   left: 66%;
 }
 
-#login:checked _ nav label.login,
-#register:checked _ nav label.register,
-#reset:checked _ nav label.reset {
+#login:checked ~ nav label.login,
+#register:checked ~ nav label.register,
+#reset:checked ~ nav label.reset {
   color: #fff;
 }
 
@@ -201,4 +201,34 @@ section .content {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+
+.content form label {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content form label input {
+  display: block;
+  width: 100%;
+  padding: 1.3rem 3rem;
+  border-radius: 10px 0 10px 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+  color: var(--dark-grey);
+  transition: all .3s;
+}
+
+.content form label input:focus:invalid {
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--color-sec);
+}
+
+.content form label input:valid {
+  font-size: 1.6rem;
+  border-bottom: 2px solid green;
+  background-color: #e8f0fe;
 }
