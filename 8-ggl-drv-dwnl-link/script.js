@@ -16,6 +16,20 @@ const generateLink = (e) => {
     .replace("/view?usp=sharing", "");
 
     downloadLink.value = getDownloadLink;
+
+    function copyText(target) {
+      if (target.value == "") {
+          alert("Please generate a Download Link")
+      } else {
+          target.select();
+          document.execCommand("copy");
+          alert("Link has been copied to clipboard");
+      }
+    }
+    const copy = document.querySelector(".copy");
+    copy.addEventListener("click", () => {
+        return copyText(downloadLink);
+    })
   }
 }
 
