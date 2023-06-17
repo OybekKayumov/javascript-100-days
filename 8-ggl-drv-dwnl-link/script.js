@@ -1,6 +1,9 @@
 const gLink = document.getElementById('glink');
 const btn = document.getElementById('btn');
 const downloadLink = document.getElementById('download-link');
+const embedAudio = document.getElementById("embed-audio");
+const embedVideo = document.getElementById("embed-video");
+const clear = document.querySelector(".clear");
 
 const generateLink = (e) => {
   e.preventDefault();
@@ -21,9 +24,12 @@ const generateLink = (e) => {
       if (target.value == "") {
           alert("Please generate a Download Link")
       } else {
-          target.select();
-          document.execCommand("copy");
-          alert("Link has been copied to clipboard");
+          // target.select();
+          // document.execCommand("copy");
+          navigator.clipboard.writeText(target.value)
+            .then(() => {
+              alert("Link has been copied to clipboard");
+            })
       }
     }
     const copy = document.querySelector(".copy");
@@ -62,3 +68,13 @@ const generateLink = (e) => {
 }
 
 btn.addEventListener('click', generateLink);
+
+function clearForm(e) {
+  e.preventDefault();
+  gLink.value = "";
+  downloadLink.value = "";
+  embedAudio.value = "";
+  embedVideo.value = "";
+}
+
+clear.addEventListener("click", clearForm);
