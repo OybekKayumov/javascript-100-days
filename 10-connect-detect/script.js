@@ -12,7 +12,31 @@ async function connectionStatus() {
     image.src = "./images/online.png";
 
     setColor();
+
+    return fetchResult.status >= 200 && fetchResult.status < 300;
   } catch (error) {
-    
+    console.error(error);
+    statusDisplay.textContent = "OOPS!!! Your Internet Connection is down.";
+    image.src = "./images/offline.png";
+    bgColor.classList.remove("online");
   }
 }
+
+// monitoring connection
+setInterval(async () => {
+  const result = await connectionStatus();
+
+  if (result) {
+    statusDisplay.textContent = "You are Online";
+    setColor();
+  }
+}, 5000);
+
+// check connection when page loads
+window.addEventListener('load', async (e) => {
+  if (connectionStatus()) {
+    statusDisplay.textContent = "Online...";
+  } else {
+    statusDisplay.textContent = "Offline...";
+  }
+});
