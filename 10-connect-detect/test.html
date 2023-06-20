@@ -20,6 +20,23 @@
       </div>
     </section>
 
-    <script src="script.js"></script>
+    <script>
+      window.addEventListener('load', e => {
+        const statusDisplay = document.getElementById('status');
+        statusDisplay.textContent = navigator.onLine 
+          ? 'Online'
+          : 'Offline';
+      })
+
+      window.addEventListener('offline', e => {
+        const statusDisplay = document.getElementById('status');
+        statusDisplay.textContent = 'Offline';
+      })
+
+      window.addEventListener('online', e => {
+        const statusDisplay = document.getElementById('status');
+        statusDisplay.textContent = 'Online';
+      })
+    </script>
   </body>
 </html>
