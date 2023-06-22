@@ -37,5 +37,58 @@ img {
 .container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
+.quiz-box {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #eee;
+  padding: 1rem 5rem 5rem 5rem;
+  border: 3px solid var(--color-primary);
+  border-radius: 5px;
+}
+
+.quiz-box h1 {
+  background-color: var(--color-primary);
+  font-size: 4rem;
+  text-align: center;
+  color: var(--white);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border-radius: 3px;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quiz-header #progress {
+  color: var(--dark-grey);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.quiz-header #count-down {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: orangered;
+  padding: 5px;
+  margin: 1px;
+  color: var(--white);
+  border-radius: 3px;  
+}
+
+.quiz-box #question {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: orangered;
+  border: 1px solid #777;
+}
+
