@@ -90,5 +90,75 @@ img {
   font-weight: 600;
   color: orangered;
   border: 1px solid #777;
+  border: 1px 0;
+  padding: 5px 0;
 }
+
+.buttons {
+  margin: 1.5rem 0 4rem 0;
+}
+
+.btn {
+  text-align: left;
+  background-color: #ddd;
+  width: 100%;
+  font-size: 1.8rem;
+  color: var(--black);
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  margin: 7px 0;
+  padding: 1rem;
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: var(--white);
+}
+
+.btn:active {
+  background-color: var(--color-sec);
+}
+
+
+#score {
+  color: var(--white);
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.quiz-repeat {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.quiz-repeat a {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background-color: orangered;
+  padding: 1rem;
+  border-radius: 5px;
+  transition: all .3s;
+}
+
+.quiz-repeat a:hover {
+  background-color: var(--color-primary);
+}
+
+footer {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #005490;
+  margin-top: 2rem;
+}
+
+
+
+
+
+
 
