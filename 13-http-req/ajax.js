@@ -32,8 +32,6 @@ function getUsers(e) {
       })
 
       document.getElementById('users').innerHTML = output;
-    } else {
-      
     }
   }
 
