@@ -6,26 +6,23 @@ function getUsers(e) {
 
   fetch('users.json')
     .then(response => response.json())
-    .then(data => console.log('data: ', data))
+    .then(data => {
+      console.log('data: ', data)
+      
+      let output = '';
 
-      // const users = JSON.parse(this.responseText);
+      data.forEach(user => {
+        output += `
+          <hr>
+          <ul>
+            <li>ID: ${user.id}</li>
+            <li>Name: ${user.name}</li>
+            <li>Age: ${user.age}</li>
+            <li>Email: ${user.email}</li>
+          </ul>
+        `;
+      })
 
-      // render users to html
-    //   let output = '';
-
-    //   users.forEach(user => {
-    //     output += `
-    //       <hr>
-    //       <ul>
-    //         <li>ID: ${user.id}</li>
-    //         <li>Name: ${user.name}</li>
-    //         <li>Age: ${user.age}</li>
-    //         <li>Email: ${user.email}</li>
-    //       </ul>
-    //     `;
-    //   })
-
-    //   document.getElementById('users').innerHTML = output;
+      document.getElementById('users').innerHTML = output;
+    })
 }
-
-// btn.addEventListener('click', getUsers);
