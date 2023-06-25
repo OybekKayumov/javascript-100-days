@@ -3,8 +3,8 @@ const btn = document.querySelector('.btn');
 
 const showPosition = (pos) => {
   userLocation.innerHTML = `
-    Lat: ${pos.coords.latitude} <br>
-    Lon: ${pos.coords.longitude} 
+    Latitude: ${pos.coords.latitude} <br>
+    Longitude: ${pos.coords.longitude} 
   `;
 }
 
