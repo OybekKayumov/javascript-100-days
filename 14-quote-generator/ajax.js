@@ -1,9 +1,16 @@
 const btn = document.querySelector('.get-quotes');
+const number = document.getElementById('number');
 
 btn.addEventListener('click', getQuotes);
 
 function getQuotes(e) {
   e.preventDefault();
+
+  if (number.ariaValueMax.length == 0) {
+    return alert('Please enter a number')
+  } else {
+    
+  }
 
   const https = new XMLHttpRequest();
 
@@ -17,13 +24,14 @@ function getQuotes(e) {
       let output = '';
       res.forEach(function (quote) {
         output += `
-          
+          <li>Quote: ${quote.text}</li>
+          <li>Author: ${quote.author}</li>
+          <hr>
         `;
       }) 
 
-    } else {
-      
-    }
+      document.querySelector('.quotes').innerHTML = output;
+    } 
   }
 
   https.send();
