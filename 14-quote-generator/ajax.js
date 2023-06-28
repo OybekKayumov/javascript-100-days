@@ -17,7 +17,9 @@ function getQuotes(e) {
       if (this.status === 200) {
         console.log('this.responseText: ', this.responseText);
 
-        const res = JSON.parse(this.responseText);
+        // const res = JSON.parse(this.responseText);        
+        const res = shuffle(JSON.parse(this.responseText));
+
         let output = '';
         // res.forEach(function (quote) {
         //   output += `
@@ -34,7 +36,6 @@ function getQuotes(e) {
                <li>Author: ${res[i].author}</li>
                <hr>
           `;
-          
         }
 
         document.querySelector('.quotes').innerHTML = output;
@@ -43,4 +44,24 @@ function getQuotes(e) {
 
     https.send();
   }
+}
+
+// shuffle quotes
+function shuffle(quotes) {
+  let curInd = quotes.length, tempValue, randomIndex;
+
+  // while elements exists in the array
+  while (curInd > 0) {
+    randomIndex = Math.floor(Math.random() * curInd);
+
+    // decrease curInd by 1
+    curInd--;
+
+    // swap las elem with curInd
+    tempValue = quotes[curInd];
+    quotes[curInd] = quotes[randomIndex];
+    quotes[randomIndex] = tempValue;
+  }
+
+  return quotes; 
 }
