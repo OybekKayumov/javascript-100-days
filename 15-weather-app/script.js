@@ -1,5 +1,5 @@
 const api = {
-  key: "28fd15358cdecbc1a1dfef367e71acef",
+  key: "api-key",
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
@@ -55,4 +55,16 @@ function displayData(res) {
 
       search.value = "";
   }
+}
+
+function dateFunction (d) {
+  let months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  let day = days[d.getDay()];
+  let date = d.getDate();
+  let month = months[d.getMonth()];
+  let year = d.getFullYear();
+
+  return `${day}, ${date} ${month} ${year}`;
 }
