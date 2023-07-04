@@ -33,7 +33,7 @@ h1 {
   line-height: 2;
 }
 
-.countdown {
+#countdown {
   background-color: rgba(0, 0, 0, .4);
   padding: 20px;
   font-size: 45px;
