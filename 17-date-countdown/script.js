@@ -12,10 +12,16 @@ const c = setInterval(() => {
   const sec = Math.floor(totalSec) % 60;
 
   const countDown = document.getElementById('countdown');
-  countDown.textContent = `${days} days ${hours} hours : ${mins} min: ${sec}s`
+  countDown.textContent = `
+    ${days} days ${format(hours)} hours : ${format(mins)} min: ${format(sec)}s
+  `
 
   if (totalSec < 0) {
     clearInterval();
     countDown.textContent = "Happy New Year!!!"
   }
 }, 1000)
+
+function format(t) {
+  return t < 10 ? `0${t}` : t
+}
