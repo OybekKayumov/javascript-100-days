@@ -16,26 +16,52 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* 
 html {
   font-size: 10px;
-}
+} */
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: rgb(90, 90, 90 );
+  color: var(--color-sec);
 }
 
-p {
+/* p {
   font-size: 1.6rem;
   line-height: 1.5;
 }
 
 img {
   width: 100%;
-}
+} */
 
 .container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 100px 10px 0 10px;
+}
+
+#search {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+#list {
+  list-style: none;
+}
+
+#list li {
+  border: 1px solid #ddd;
+  padding: 12px;
+  background-color: #f6f6f6;
+  display: block;
+}
+
+#list li:hover {
+  background-color: #eee;
 }
