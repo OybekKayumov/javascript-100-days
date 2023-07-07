@@ -15,7 +15,9 @@ function startCountDown() {
       const mins = Math.floor(promoTime / 60) % 60;
       const sec = Math.floor(promoTime % 60);
 
-      counting.innerHTML = `Time: ${hours}hr : ${mins}min : ${sec}s`;
+      counting.innerHTML = `Time: 
+        ${format(hours)}hr : ${format(mins)}min : ${format(sec)}s`
+      ;
     }
   }, 1000)
 }
