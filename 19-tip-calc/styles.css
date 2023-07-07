@@ -55,7 +55,7 @@ section {
 
 h2 {
   font-size: 4rem;
-  color: var(--white);
+  color: var(--white);  
   background-color: var(--color-sec);
   text-align: center;
   padding: 1rem;
@@ -89,4 +89,44 @@ select {
   margin: 5px 0;
   background-color: var(--color-primary);
   color: var(--white);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--color-sec);
+}
+
+.error {
+  color: red;
+  display: none;
+}
+
+.result {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.result > * {
+  background-color: var(--grey);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.total {
+  color: red;
+}
+
+label {
+  color: var(--light-blue);
+}
+
+.tip {
+  color: var(--light-blue);
 }
