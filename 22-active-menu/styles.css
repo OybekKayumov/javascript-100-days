@@ -19,7 +19,7 @@
 
 html {
   font-size: 10px;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,30 +43,21 @@ img {
 
 header {
   width: 100%;
-  /* background-color: var(--dark-grey); */
+  background-color: var(--dark-grey);
   position: fixed;
-  top: 0;
   left: 0;
-  padding: 2rem 0;
-  z-index: 111;
-  transition: all .5s;
-}
-
-header.sticky {
-  background-color: var(--grey);
-  /* border-bottom: 1px solid #777; */
-  padding: 1rem 0;
+  top: 0;
 }
 
 nav {
-  /* height: 7.5rem; */
+  height: 7.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   color: var(--color-sec);
 }
 
@@ -81,23 +72,13 @@ nav {
   margin: 0 1.5rem;
 }
 
-.nav-list li a {
+li a {
   color: var(--white);
   font-size: 1.6rem;
   text-decoration: none;
 }
 
-header.sticky li a {
-  color: var(--dark-grey);
-}
-
-section.header {
-  width: 100%;
-  height: 90vh;
-  background: url(./images/bg-girl.jpg) center no-repeat;
-  background-size: cover;
-}
-
+/* Section */
 section {
   padding: 5rem 0;
 }
@@ -122,6 +103,7 @@ h2 {
   margin: 3px;
 }
 
+/* ACTIVE CLASS */
 .active {
   position: relative;
 }
