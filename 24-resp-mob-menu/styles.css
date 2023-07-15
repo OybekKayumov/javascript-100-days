@@ -172,7 +172,7 @@ h2 {
     border: 1px solid skyblue;
     border-radius: 3px;
     z-index: 999;
-    /* transform: translateY(-200%); */
+    transform: translateY(-200%);
     transition: all 0.5s;
   }
 
@@ -186,5 +186,9 @@ h2 {
 
   .nav-list li:first-child {
     border-top: 1px solid var(--white);
+  }
+
+  .nav-list li a:hover {
+    color: var(--color-sec);
   }
 }

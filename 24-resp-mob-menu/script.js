@@ -1,23 +1,28 @@
-const scrollBtn = document.querySelector('.top');
-const rootEl = document.documentElement;
+const links = document.querySelectorAll('.nav-list li a');
 
-document.addEventListener('scroll', showBtn);
+for (const link of links) {
+  link.addEventListener('click', smoothScroll);
+};
 
-function showBtn() {
-  const scrollTotal = rootEl.scrollHeight - rootEl.clientHeight;
+function smoothScroll(e) {
+  e.preventDefault();
 
-  if (rootEl.scrollTop / scrollTotal > 0.3) {
-    scrollBtn.classList.add('show-btn')
-  } else {
-    scrollBtn.classList.remove('show-btn')
-  }
+  const href = this.getAttribute('href');
+
+  document.querySelector(href).scrollIntoView({
+    behavior: 'smooth'
+  })
 }
 
-scrollBtn.addEventListener('click', scrollToTop);
+// rep mob menu
+const menu = document.querySelector('.nav-list');
+const hamburger = document.querySelector('.hamburger');
+const close = document.querySelector('.close');
 
-function scrollToTop() {
-  rootEl.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  })
+hamburger.addEventListener('click', showMenu);
+
+function showMenu() {
+  hamburger.style.display = 'none';
+  close.style.transform = 'translateY(0)';
+  menu.style.transform = 'translateY(0)';
 }
