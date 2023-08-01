@@ -43,5 +43,9 @@ function scrollProgress() {
     newsLetter.style.transform = "translateX(0)";
   } else {
     newsLetter.style.transform = "translateX(-100%)";
-  }  
+  }
+
+  document.querySelector(".fa-times").addEventListener("click", () => {
+    newsLetter.style.transform = "translateX(-100%)";
+  });
 }
