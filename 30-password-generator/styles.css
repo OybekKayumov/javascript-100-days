@@ -92,3 +92,39 @@ h1 {
   border: none;
   font-size: 1.6rem;
 }
+
+.p-header button, 
+.form-field input[type="number"] {
+  padding: 3px 5px;
+  background-color: var(--white);
+  outline: none;
+  border: none;
+  border-radius: 3px 0 0 0;
+  font-size: 1.4rem;
+}
+
+.p-header button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+#submit {
+  width: 100%;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background-color: var(--color-sec);
+  color: var(--white);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+#submit:hover {
+  background-color: #ea2c62;
+}
