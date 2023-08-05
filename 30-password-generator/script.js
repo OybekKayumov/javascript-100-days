@@ -39,3 +39,15 @@ function generatePwd(len, initialPwd) {
 
 // let str = "Hello";
 // let res = str.charAt(0);  // H
+
+// copy password
+copy.addEventListener("click", () => {
+  if (password.value == "") {
+    alert("Please generate a password")
+  } else {
+    password.select();
+    document.execCommand("copy");
+    
+    alert("Password has been copied to clipboard")
+  }
+});
