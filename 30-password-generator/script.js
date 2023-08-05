@@ -17,8 +17,25 @@ submit.addEventListener("click", () => {
   let initialPwd = empty;
 
   // add character if an option is checked
-  upperCase.checked ? (initialPassword += uCase) : "";
-  lowerCase.checked ? (initialPassword += lCase) : "";
-  pNumber.checked ? (initialPassword += number) : "";
-  pSymbol.checked ? (initialPassword += symbol) : "";
+  upperCase.checked ? (initialPwd += uCase) : "";
+  lowerCase.checked ? (initialPwd += lCase) : "";
+  pNumber.checked ? (initialPwd += number) : "";
+  pSymbol.checked ? (initialPwd += symbol) : "";
+
+  password.value = generatePwd(pwdLength.value, initialPwd);
 })
+
+function generatePwd(len, initialPwd) {
+  let pass = "";
+
+  for (let i = 0; i < len; i++) {
+    pass += initialPwd.charAt(
+      Math.floor(Math.random() * initialPwd.length)
+    );
+  }
+
+  return pass;
+}
+
+// let str = "Hello";
+// let res = str.charAt(0);  // H
