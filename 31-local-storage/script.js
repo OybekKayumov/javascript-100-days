@@ -8,3 +8,6 @@ console.log(': ', Object.getOwnPropertyNames(window) );
 // removeItem(): Remove an item by key from localStorage
 // clear(): Clear all localStorage
 // key(): Passed a number to retrieve the key of a localStorage
+
+// window.localStorage.setItem("key", "value");
+window.localStorage.setItem("firstName", "John");
