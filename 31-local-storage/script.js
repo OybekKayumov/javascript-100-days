@@ -13,6 +13,7 @@ console.log(': ', Object.getOwnPropertyNames(window) );
 window.localStorage.setItem("firstName", "John");
 localStorage.setItem("lastName", "Doe");
 
+// object
 const person = {
   fullName: "John Doe",
   location: "madina",
@@ -20,4 +21,20 @@ const person = {
 
 localStorage.setItem("user", JSON.stringify(person))
 
-const fruits = ["Pineapple", "Mango", "Pawpaw"];
+// array
+const fruit = ["Pineapple", "Mango", "Pawpaw"];
+localStorage.setItem("fruit", JSON.stringify(fruit));
+
+// get from localStorage
+console.log( localStorage.getItem("firstName"));
+
+// remove from localStorage
+localStorage.removeItem("fruit");
+
+// clear localStorage
+// localStorage.clear();
+
+localStorage.setItem("name", "John");
+localStorage.setItem("age", "27");
+
+console.log(': ', localStorage.key(0));
