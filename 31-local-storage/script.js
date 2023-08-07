@@ -11,3 +11,13 @@ console.log(': ', Object.getOwnPropertyNames(window) );
 
 // window.localStorage.setItem("key", "value");
 window.localStorage.setItem("firstName", "John");
+localStorage.setItem("lastName", "Doe");
+
+const person = {
+  fullName: "John Doe",
+  location: "madina",
+};
+
+localStorage.setItem("user", JSON.stringify(person))
+
+const fruits = ["Pineapple", "Mango", "Pawpaw"];
