@@ -57,4 +57,39 @@ section {
 
 .add-item {
   background-color: var(--color-primary);
+  padding: 5rem 0;
+  margin: 2rem auto;
+  border-radius: 5px;
+}
+
+.add-item form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-item form input {
+  padding: 1rem 1.5rem;
+  font-size: 1.8rem;
+  color: var(--grey);
+  width: 75%;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255, 0.7);
+  outline: none;
+  background-color: transparent;
+  margin-right: 5px;
+}
+
+::placeholder {
+  color: rgba(255,255,255, 0.7);
+}
+
+form button {
+  width: 10%;
+  font-size: 1.6;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: var(--color-sec);
+  color: var(--grey);
+  padding: 1rem;
 }
