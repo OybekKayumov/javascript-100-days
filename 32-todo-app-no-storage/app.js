@@ -19,5 +19,15 @@ function addTask(e) {
 }
 
 function addTaskToLS() {
-  
+  let tasks;
+
+  if (localStorage.getItem("tasks") === null) {
+    tasks = []
+  } else {
+    tasks = JSON.parse(localStorage.getItem("tasks"))
+  }
+
+  tasks.push(input.value);
+  localStorage.setItem("tasks", JSON.stringify(tasks))
+  input.value = "";
 }
