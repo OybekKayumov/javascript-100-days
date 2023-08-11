@@ -59,3 +59,14 @@ function deleteTask(index) {
   displayTask();
 }
 
+clear.addEventListener("click", clearTasks);
+
+function clearTasks() {
+  const delTasks = confirm("Delete all tasks");
+
+  if (delTasks == true) {
+    localStorage.clear();
+    todoList.innerHTML = "";
+    displayTask();
+  }
+}
