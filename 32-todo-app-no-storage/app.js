@@ -1,3 +1,7 @@
+window.onload = function () {
+  displayTask();
+};
+
 const input = document.querySelector("input"),
       btn = document.querySelector("button"),
       todoList = document.querySelector(".todo-list"),
@@ -9,17 +13,17 @@ btn.addEventListener("click", addTask);
 
 function getTasks() {
   if (localStorage.getItem("tasks") === null) {
-    tasks = []
+    tasks = [];
   } else {
-    tasks = JSON.parse(localStorage.getItem("tasks"))
+    tasks = JSON.parse(localStorage.getItem("tasks"));
   }
 }
 
-function addTask(e) {
+function addTask() {
   if (input.value !== "") {
     addTaskToLS();
-    displayTask();
-    
+    todoList.innerHTML = "";
+    displayTask();    
  } else {
    alert("Please enter a task");
  }
@@ -29,7 +33,7 @@ function addTaskToLS() {
   getTasks();
 
   tasks.push(input.value);
-  localStorage.setItem("tasks", JSON.stringify(tasks))
+  localStorage.setItem("tasks", JSON.stringify(tasks));
   input.value = "";
 }
 
@@ -44,7 +48,7 @@ function displayTask() {
     newLi.appendChild(document.createTextNode(task));
     newLi.appendChild(delBtn);
     todoList.appendChild(newLi);
-  })
+  });
 }
 
 function deleteTask(index) {
