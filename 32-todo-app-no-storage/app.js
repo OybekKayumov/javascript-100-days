@@ -46,3 +46,16 @@ function displayTask() {
     todoList.appendChild(newLi);
   })
 }
+
+function deleteTask(index) {
+  const del = confirm("You are about to delete this task!!!");
+  if (del == true) {
+    getTasks();
+  }
+
+  tasks.splice(index, 1);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  todoList.innerHTML = "";
+  displayTask();
+}
+
