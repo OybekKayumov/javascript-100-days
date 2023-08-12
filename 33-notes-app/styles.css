@@ -84,6 +84,11 @@ form textarea {
   margin: 1rem;
 }
 
+.note-cta {
+  display: flex;
+  justify-content: space-between;
+}
+
 .notes-counter {
   font-size: 1.4rem;
   background-color: var(--dark-grey);
@@ -92,4 +97,28 @@ form textarea {
   color: var(--white);
   font-weight: 600;
   border-radius: 3px;
+}
+
+.note-btn {
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background-color: red;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: var(--color-primary);
+}
+
+.note-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.note-text {
+  font-size: 1.4rem;
 }
