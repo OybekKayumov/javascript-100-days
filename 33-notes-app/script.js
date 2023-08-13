@@ -19,4 +19,17 @@ noteBtn.addEventListener("click", (e) => {
   if (noteTitle.value == "" || noteText.value == "") {
     return alert("Please add Note Title and Details")
   }
+
+  getNotes();
+
+  let myObj = {
+    title: noteTitle.value,
+    text: noteText.value,
+  }
+
+  notesObj.push(myObj);
+
+  localStorage.setItem("notes", JSON.stringify(notesObj))
+
+  document.querySelector("form").reset();
 })
