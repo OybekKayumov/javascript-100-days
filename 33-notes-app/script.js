@@ -32,4 +32,11 @@ noteBtn.addEventListener("click", (e) => {
   localStorage.setItem("notes", JSON.stringify(notesObj))
 
   document.querySelector("form").reset();
-})
+
+  showNotes();
+});
+
+
+function showNotes() {
+  
+}
