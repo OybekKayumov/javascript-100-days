@@ -1,15 +1,15 @@
-const noteBtn = document.getElementById("add-btn");
-const noteTitle = document.getElementById("note-title");
-const noteText = document.getElementById("note-text");
-const clear = document.querySelector(".clear");
+const noteBtn = document.getElementById("add-btn"),
+  noteTitle = document.getElementById("note-title"),
+  noteText = document.getElementById("note-text"),
+  clear = document.querySelector(".clear");
 
 function getNotes() {
-  let notes = localStorage.getItem("notes")
+  let notes = localStorage.getItem("notes");
 
   if (notes == null) {
-    notesObj = []
+    notesObj = [];
   } else {
-    notesObj = JSON.parse(notes)
+    notesObj = JSON.parse(notes);
   }
 }
 
@@ -17,7 +17,7 @@ noteBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   if (noteTitle.value == "" || noteText.value == "") {
-    return alert("Please add Note Title and Details")
+    return alert("Please add Note Title and Details");
   }
 
   getNotes();
@@ -25,11 +25,11 @@ noteBtn.addEventListener("click", (e) => {
   let myObj = {
     title: noteTitle.value,
     text: noteText.value,
-  }
+  };
 
   notesObj.push(myObj);
 
-  localStorage.setItem("notes", JSON.stringify(notesObj))
+  localStorage.setItem("notes", JSON.stringify(notesObj));
 
   document.querySelector("form").reset();
 
@@ -70,13 +70,13 @@ function showNotes() {
 }
 
 function deleteNote(index) {
-  let confirmDel = confirm("Delete this note?")
+  let confirmDel = confirm("Delete this note?");
 
   if (confirmDel) {
     getNotes();
     notesObj.splice(index, 1);
 
-    localStorage.setItem("notes", JSON.stringify(notes));
+    localStorage.setItem("notes", JSON.stringify(notesObj));
     showNotes();
   }
 }
@@ -100,4 +100,5 @@ function editNote(index) {
   localStorage.setItem("notes", JSON.stringify(notesObj));
   showNotes();
 }
+
 showNotes();
