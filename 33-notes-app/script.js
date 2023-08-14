@@ -68,3 +68,15 @@ function showNotes() {
     noteElm.innerHTML = "No notes added, Please add a note";
   }
 }
+
+function deleteNote(index) {
+  let confirmDel = confirm("Delete this note?")
+
+  if (confirmDel == true) {
+    getNotes();
+    notesObj.splice(index, 1);
+
+    localStorage.setItem("notes", JSON.stringify(notes));
+    showNotes();
+  }
+}
