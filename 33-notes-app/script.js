@@ -72,7 +72,7 @@ function showNotes() {
 function deleteNote(index) {
   let confirmDel = confirm("Delete this note?")
 
-  if (confirmDel == true) {
+  if (confirmDel) {
     getNotes();
     notesObj.splice(index, 1);
 
@@ -80,3 +80,24 @@ function deleteNote(index) {
     showNotes();
   }
 }
+
+clear.addEventListener("click", () => {
+  localStorage.clear();
+  showNotes();
+});
+
+function editNote(index) {
+  if (noteTitle.value !== "" || noteText.value !== "") {
+    return alert("Please clear the form before editing");
+  }
+
+  getNotes();
+
+  noteTitle.value = notesObj[index].title;
+  noteText.value = notesObj[index].text;
+
+  notesObj.splice(index, 1);
+  localStorage.setItem("notes", JSON.stringify(notesObj));
+  showNotes();
+}
+showNotes();
