@@ -22,6 +22,18 @@ function calculateBMI(e) {
     return (result.innerHTML = "Provide a valid Height");
   } else {
     height = height / 100
-    let bmi = (weight / Math.pow(height, 2))
+    let bmi = (weight / Math.pow(height, 2)).toFixed(2);
   }
+
+  if (bmi < 18.5) {
+    showResult();
+  } else {
+    
+  }
+}
+
+function showResult(val, color) {
+  result.style.backgroundColor = color;
+
+  return (result.innerHTML = val);
 }
